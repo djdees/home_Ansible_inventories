@@ -1,0 +1,37 @@
+all:
+  hosts:
+  children:
+    lab:
+      hosts:
+        pi00:
+          ansible_host: 192.168.1.90
+          ansible_user: pi
+          ansible_group: pi
+        pi01:
+          ansible_host: 192.168.1.91
+          ansible_user: pi
+          ansible_group: pi
+        pi02:
+          ansible_host: 192.168.1.92
+          ansible_user: pi
+          ansible_group: pi
+        pi03:
+          ansible_host: 192.168.1.93
+          ansible_user: pi
+          ansible_group: pi
+        pi04:
+          ansible_host: 192.168.1.94
+          ansible_user: pi
+          ansible_group: pi
+    piholes:
+      hosts:
+        pihole:
+          ansible_host: 192.168.1.8
+          ansible_user: pi
+          ansible_group: pi
+    print_servers:
+      hosts:
+        scribe:
+          ansible_host: 192.168.1.83
+          ansible_user: pi
+          ansible_group: pi
